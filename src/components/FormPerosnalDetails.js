@@ -5,6 +5,7 @@ import TextField from 'material-ui/TextField'
 import DropDownMenu from 'material-ui/DropDownMenu'
 import MenuItem from 'material-ui/MenuItem'
 import RaisedButton from 'material-ui/RaisedButton'
+import { Slider } from 'material-ui'
 
 
 export class FormPersonalDetails extends Component {
@@ -36,11 +37,13 @@ export class FormPersonalDetails extends Component {
 
 
     //dropdwn code end 
+    
 
 
 
     render() {
         const { values, handleChange } = this.props;
+        
         return (
             <MuiThemeProvider>
                 <React.Fragment>
@@ -59,6 +62,19 @@ export class FormPersonalDetails extends Component {
                         defaultValue={values.job}
                     />
                     <br/>
+                    <h4>Rating in React</h4>
+                    <div style={{alignItems: 'center', justifyContent: 'center'}}>
+                    <Slider 
+                        min={0} 
+                        max={100} 
+                        value={50} 
+                        style ={{width: 300, margin:20}}
+                    
+                    />
+                    </div>
+                    
+                    <br/>
+
                     <TextField 
                         hintText="Enter Summary"
                         floatingLabelText="Summary"
@@ -92,5 +108,6 @@ const styles = {
     button: {
         margin: 15
     }
+
 }
 export default FormPersonalDetails
