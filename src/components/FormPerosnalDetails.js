@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar'
 import TextField from 'material-ui/TextField'
-import DropDownMenu from 'material-ui/DropDownMenu'
-import MenuItem from 'material-ui/MenuItem'
 import RaisedButton from 'material-ui/RaisedButton'
 import { Slider } from 'material-ui'
 
@@ -63,16 +61,14 @@ export class FormPersonalDetails extends Component {
                     />
                     <br/>
                     <h4>Rating in React</h4>
-                    <div style={{alignItems: 'center', justifyContent: 'center'}}>
-                    <Slider 
-                        min={0} 
-                        max={100} 
-                        value={50} 
-                        style ={{width: 300, margin:20}}
-                    
-                    />
+                    <div style={{ alignItems: "center", justifyContent: "center", display: 'flex' }}>
+                        <Slider 
+                            min={0} 
+                            max={100} 
+                            value={60} 
+                            style ={{width: 300, margin:20}}
+                        />
                     </div>
-                    
                     <br/>
 
                     <TextField 
